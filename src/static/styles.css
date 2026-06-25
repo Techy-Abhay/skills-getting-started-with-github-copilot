@@ -24,6 +24,32 @@ header {
   border-radius: 5px;
 }
 
+.scrolling-banner {
+  overflow: hidden;
+  background: linear-gradient(90deg, #1a237e, #3949ab);
+  color: white;
+  padding: 10px 0;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 30px;
+}
+
+.scrolling-banner p {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 12s linear infinite;
+  padding-left: 100%;
+  margin: 0;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 header h1 {
   margin-bottom: 10px;
 }
@@ -72,6 +98,69 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.activity-card .participants {
+  background-color: #eef1ff;
+  border: 1px solid #c2c8ea;
+  border-radius: 5px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.activity-card .participants p {
+  margin-bottom: 10px;
+  color: #1a237e;
+}
+
+.activity-card .participants ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.activity-card .participant-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f8ff;
+  border: 1px solid #d7dbe9;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+
+.activity-card .participant-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activity-card .participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  line-height: 1;
+  transition: background-color 0.2s ease;
+}
+
+.activity-card .participant-delete:hover {
+  background-color: rgba(198, 40, 40, 0.12);
+}
+
+.activity-card .participants li {
+  margin-bottom: 6px;
+}
+
+.activity-card .no-participants {
+  color: #5f677d;
+  font-style: italic;
+  margin: 0;
 }
 
 .form-group {
